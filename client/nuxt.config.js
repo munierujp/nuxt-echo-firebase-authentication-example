@@ -1,3 +1,7 @@
+import fs from 'fs'
+
+const config = loadConfig('./config.json')
+
 const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
   router: {
     base: '/nuxt-firebase-authentication-example/'
@@ -56,5 +60,22 @@ export default {
     extend (config, ctx) {
     }
   },
+  env: {
+    config
+  },
   ...routerBase
+}
+
+function loadConfig (filepath) {
+  try {
+    const data = fs.readFileSync(filepath, 'utf-8')
+    return JSON.parse(data)
+  } catch (ignored) {
+    const {
+      API_BASE_URL
+    } = process.env
+    return {
+      API_BASE_URL
+    }
+  }
 }

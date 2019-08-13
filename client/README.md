@@ -1,22 +1,25 @@
 # nuxt-firebase-authentication-example
+Example of Nuxt.js + Echo + Firebase Authentication
 
-> Example of Nuxt.js + Firebase Authentication
-
-## Build Setup
-
-``` bash
-# install dependencies
-$ npm run install
-
-# serve with hot reload at localhost:3000
-$ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
+## Development
+### Install packages
+```sh
+$ npm i
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+or
+
+```sh
+$ yarn install
+```
+
+### Create config file
+```sh
+$ cp config.sample.json config.json
+```
+
+Input below values to `config.json`:
+
+|key|description|example|
+|---|---|---|
+|`API_BASE_URL`|API server's base URL|`http://localhost:5000/`|
