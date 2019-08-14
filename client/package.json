@@ -1,7 +1,7 @@
 {
-  "name": "nuxt-firebase-authentication-example",
+  "name": "nuxt-echo-firebase-authentication-example-client",
   "version": "1.0.0",
-  "description": "Example of Nuxt.js + Firebase Authentication",
+  "description": "Client of nuxt-echo-firebase-authentication-example",
   "author": "Munieru",
   "private": true,
   "scripts": {
