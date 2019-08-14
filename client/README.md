@@ -1,7 +1,7 @@
-# nuxt-firebase-authentication-example
-Example of Nuxt.js + Echo + Firebase Authentication
+# nuxt-echo-firebase-authentication-example-client
+Client of nuxt-echo-firebase-authentication-example
 
-## Development
+## Usage
 ### Install packages
 ```sh
 $ npm i
