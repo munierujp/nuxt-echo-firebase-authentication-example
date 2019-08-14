@@ -22,4 +22,4 @@ Input below values to `config.json`:
 
 |key|description|example|
 |---|---|---|
-|`API_BASE_URL`|API server's base URL|`http://localhost:5000/`|
+|`API_ORIGIN`|API server's ORIGIN|`http://localhost:5000`|

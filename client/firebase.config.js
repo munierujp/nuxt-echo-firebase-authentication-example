@@ -1,10 +1,10 @@
 // NOTE: It's safe to publish these values.
 export default {
-  apiKey: 'AIzaSyDtYgrNF784HQeHA9fKdR9utHmD8OSerdY',
-  authDomain: 'nuxt-firebase-authentication.firebaseapp.com',
-  databaseURL: 'https://nuxt-firebase-authentication.firebaseio.com',
-  projectId: 'nuxt-firebase-authentication',
+  apiKey: 'AIzaSyCUzO4Rk4JsQyRZXG5DHnn6ZlEN5ZW3x34',
+  authDomain: 'nuxt-echo-firebase-auth.firebaseapp.com',
+  databaseURL: 'https://nuxt-echo-firebase-auth.firebaseio.com',
+  projectId: 'nuxt-echo-firebase-auth',
   storageBucket: '',
-  messagingSenderId: '570149189200',
-  appId: '1:570149189200:web:ab17df9d6094c44e'
+  messagingSenderId: '147758122644',
+  appId: '1:147758122644:web:a11246eb06cba6e9'
 }

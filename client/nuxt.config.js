@@ -72,10 +72,10 @@ function loadConfig (filepath) {
     return JSON.parse(data)
   } catch (ignored) {
     const {
-      API_BASE_URL
+      API_ORIGIN
     } = process.env
     return {
-      API_BASE_URL
+      API_ORIGIN
     }
   }
 }

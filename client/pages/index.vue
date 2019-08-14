@@ -53,9 +53,9 @@
 <script>
 import firebase from '~/modules/firebase'
 
-const { API_BASE_URL } = process.env.config
-const PUBLIC_API_URL = `${API_BASE_URL}public`
-const PRIVATE_API_URL = `${API_BASE_URL}private`
+const { API_ORIGIN } = process.env.config
+const PUBLIC_API_URL = `${API_ORIGIN}/public`
+const PRIVATE_API_URL = `${API_ORIGIN}/private`
 
 export default {
   asyncData () {
