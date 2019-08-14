@@ -18,7 +18,7 @@ func main() {
 
 	// Bind routes
 	e.GET("/public", public)
-	e.GET("/private", private)
+	e.GET("/private", private, middleware.Auth())
 
 	// Start server
 	e.Logger.Fatal(e.Start(":5000"))
