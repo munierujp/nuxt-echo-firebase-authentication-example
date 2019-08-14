@@ -4,7 +4,7 @@ const config = loadConfig('./config.json')
 
 const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
   router: {
-    base: '/nuxt-firebase-authentication-example/'
+    base: '/nuxt-echo-firebase-authentication-example/'
   }
 } : {}
 
