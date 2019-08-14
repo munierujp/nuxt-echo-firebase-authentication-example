@@ -2,4 +2,8 @@ module nuxt-echo-firebase-authentication-example-server
 
 go 1.12
 
-require github.com/labstack/echo/v4 v4.1.9
+require (
+	firebase.google.com/go v3.9.0+incompatible
+	github.com/labstack/echo/v4 v4.1.9
+	google.golang.org/api v0.8.0
+)

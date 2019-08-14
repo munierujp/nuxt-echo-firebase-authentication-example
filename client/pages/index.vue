@@ -52,6 +52,9 @@
 
 <script>
 import firebase from '~/modules/firebase'
+import LocalStorage from '~/modules/LocalStorage'
+
+const JWT = LocalStorage.of('jwt')
 
 const { API_ORIGIN } = process.env.config
 const PUBLIC_API_URL = `${API_ORIGIN}/public`
@@ -81,25 +84,32 @@ export default {
   methods: {
     signIn () {
       const provider = new firebase.auth.GoogleAuthProvider()
-      firebase.auth().signInWithRedirect(provider)
+      firebase.auth().signInWithPopup(provider).then((res) => {
+        res.user.getIdToken().then((idToken) => {
+          JWT.set(idToken.toString())
+        })
+      })
     },
     signOut () {
-      firebase.auth().signOut()
+      firebase.auth().signOut().then(() => {
+        JWT.remove()
+      })
     },
     async kickPublicApi () {
-      const response = await fetchText(PUBLIC_API_URL)
-      this.response = response
+      const response = await fetch(PUBLIC_API_URL)
+      const text = await response.text()
+      this.response = text
     },
     async kickPrivateApi () {
-      const response = await fetchText(PRIVATE_API_URL)
-      this.response = response
+      const jwt = JWT.get()
+      const response = await fetch(PRIVATE_API_URL, {
+        headers: {
+          'Authorization': `Bearer ${jwt}`
+        }
+      })
+      const text = await response.text()
+      this.response = text
     }
   }
-}
-
-async function fetchText (url) {
-  const response = await fetch(url)
-  const text = await response.text()
-  return text
 }
 </script>
