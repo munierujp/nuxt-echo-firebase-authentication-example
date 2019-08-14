@@ -22,4 +22,11 @@ Input below values to `config.json`:
 
 |key|description|example|
 |---|---|---|
-|`API_ORIGIN`|API server's ORIGIN|`http://localhost:5000`|
+|`API_ORIGIN`|API server's origin|`http://localhost:5000`|
+
+### Start server
+```sh
+$ npm run dev
+```
+
+Client is available on [localhost:3000](http://localhost:3000)
