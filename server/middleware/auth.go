@@ -21,17 +21,20 @@ func auth(next echo.HandlerFunc) echo.HandlerFunc {
 		if err != nil {
 			return err
 		}
-		auth, err := app.Auth(context.Background())
+
+		client, err := app.Auth(context.Background())
 		if err != nil {
 			return err
 		}
 
-		authHeader := c.Request().Header.Get("Authorization")
-		idToken := strings.Replace(authHeader, "Bearer ", "", 1)
-		if _, err = auth.VerifyIDToken(context.Background(), idToken); err != nil {
+		auth := c.Request().Header.Get("Authorization")
+		idToken := strings.Replace(auth, "Bearer ", "", 1)
+		token, err := client.VerifyIDToken(context.Background(), idToken)
+		if err != nil {
 			return err
 		}
 
+		c.Set("jwt", token)
 		return next(c)
 	}
 }
