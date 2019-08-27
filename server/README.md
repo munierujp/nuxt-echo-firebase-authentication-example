@@ -3,7 +3,7 @@ Server of nuxt-echo-firebase-authentication-example
 
 ## Usage
 ### Add Firebase secret key file
-```
+```sh
 $ mv /path/to/file firebase_secret_key.json
 ```
 
