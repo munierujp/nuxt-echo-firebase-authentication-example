@@ -23,17 +23,17 @@
     }
   },
   "dependencies": {
-    "nuxt": "^2.0.0"
+    "nuxt": "2.8.1"
   },
   "devDependencies": {
-    "@nuxtjs/eslint-config": "^1.0.1",
-    "@nuxtjs/eslint-module": "^1.0.0",
-    "babel-eslint": "^10.0.1",
-    "eslint": "^6.1.0",
-    "eslint-plugin-nuxt": ">=0.4.2",
-    "firebase": "^6.3.4",
-    "husky": "^2.6.0",
-    "lint-staged": "^8.2.1",
-    "push-dir": "^0.4.1"
+    "@nuxtjs/eslint-config": "1.0.1",
+    "@nuxtjs/eslint-module": "1.0.0",
+    "babel-eslint": "10.0.2",
+    "eslint": "6.1.0",
+    "eslint-plugin-nuxt": "0.4.3",
+    "firebase": "6.3.4",
+    "husky": "2.7.0",
+    "lint-staged": "8.2.1",
+    "push-dir": "0.4.1"
   }
 }
